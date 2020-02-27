@@ -13,7 +13,7 @@ public class HistoryConfig {
     @Autowired
     public void configure(EventProcessingConfigurer config, ObjectMapper o) throws JsonMappingException {
         config.registerTrackingEventProcessor(
-                "io.axoniq.demo.bikerental.bikerental.history",
+                "com.ccuk.bikerental.history",
                 org.axonframework.config.Configuration::eventStore,
                 c -> TrackingEventProcessorConfiguration
                         .forParallelProcessing(2)
